@@ -73,34 +73,21 @@ header p {
   color: #e6fffd;
 }
 
-/* ================= BUTTONS ================= */
+/* ================= BUTTON ================= */
 .btn {
   display: inline-block;
-  margin: 18px 10px 0;
+  margin-top: 22px;
   padding: 14px 36px;
   border-radius: 50px;
   font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
   background: #ff9800;
   color: #ffffff;
+  transition: 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background: #e68900;
   transform: translateY(-3px);
-}
-
-.btn-outline {
-  border: 2px solid #ffffff;
-  color: #ffffff;
-}
-
-.btn-outline:hover {
-  background: #ffffff;
-  color: #0d4749;
 }
 
 /* ================= SECTIONS ================= */
@@ -133,45 +120,59 @@ section {
   transform: translateY(0);
 }
 
-/* ================= COUNTERS ================= */
-.counters {
+/* ================= FEE GRID ================= */
+.fee-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.counter {
+.fee-card {
   background: #ffffff;
-  border-radius: 14px;
-  padding: 28px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
 }
 
-.counter h3 {
-  font-size: 34px;
-  color: #1aa3a3;
-  margin: 0;
+.fee-card:hover {
+  transform: translateY(-6px);
 }
 
-/* ================= TABLE ================= */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 15px;
-  border: 1px solid #d1d5db;
-}
-
-th {
+.fee-step {
+  display: inline-block;
   background: #e0f2f1;
   color: #0d4749;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
-td strong {
+.fee-card h3 {
+  margin-top: 10px;
   color: #0d4749;
+}
+
+.fee-highlight {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1aa3a3;
+  margin: 12px 0;
+}
+
+.fee-card ul {
+  padding-left: 20px;
+}
+
+.fee-card ul li {
+  margin-bottom: 8px;
+}
+
+.fee-card.featured {
+  border: 2px solid #1aa3a3;
+  background: #f0fdfa;
 }
 
 /* ================= FOOTER ================= */
@@ -214,7 +215,6 @@ footer {
   <div>
     <a href="#about">About</a>
     <a href="#fees">Fees</a>
-    <a href="#compare">Compare</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -226,46 +226,31 @@ footer {
     <p>German Public University Admission Guidance</p>
     <p>No Fake Promises · No Private University Push · Pay Only After Admit</p>
 
-    <a href="#contact" class="btn btn-primary">Free Profile Evaluation</a>
-    <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-outline">WhatsApp Us</a>
+    <a href="#contact" class="btn">Free Profile Evaluation</a>
   </div>
 </header>
 
 <!-- ABOUT -->
 <section id="about">
-<h2 class="section-title">Experience-Based. Student-Led. Germany-Focused.</h2>
+<h2 class="section-title">Experience-Based & Student-Led Guidance</h2>
 
 <div class="card">
 <p>
-<strong>Great Germany</strong> is run by a <strong>student team</strong> who have
-<strong>personally applied to German public universities</strong> and are
-<strong>currently staying in Germany</strong>.
+<strong>Great Germany</strong> is run by a student team who have personally applied
+to German public universities and are currently staying in Germany.
 </p>
 
 <p>
-We are not agents or sales executives. We are students who have gone through the same
-APS process, SOP confusion, credit evaluation, deadline pressure, and uncertainty —
-and successfully navigated the system.
+Our guidance is based on <strong>real application experience</strong>, not sales targets.
 </p>
 
 <ul>
-<li><strong>Winter Intake 2025/26:</strong> 3 Public University Admits</li>
-<li><strong>Summer Intake 2026:</strong> 4 Public University Admits</li>
+<li>Students from <strong>Winter Intake 2025/26</strong></li>
+<li>Students from <strong>Summer Intake 2026</strong></li>
 <li>Guidance strictly for German public universities</li>
 <li>Very straightforward about admission chances</li>
 <li>No private university redirection</li>
 </ul>
-
-<p>
-Our guidance is based on <strong>real applications and real outcomes</strong>,
-not theoretical advice or commission-based counselling.
-</p>
-</div>
-
-<div class="counters card">
-<div class="counter"><h3>7</h3><p>Total Public University Admits</p></div>
-<div class="counter"><h3>2</h3><p>Successful Intakes</p></div>
-<div class="counter"><h3>100%</h3><p>Experience-Based Guidance</p></div>
 </div>
 </section>
 
@@ -273,73 +258,61 @@ not theoretical advice or commission-based counselling.
 <section id="fees">
 <h2 class="section-title">Our Transparent Fee Model</h2>
 
-<div class="card">
-<h3>Step 1: Profile Evaluation — FREE</h3>
-<p>No payment. No obligation. We first tell you if applying makes sense.</p>
+<div class="fee-grid">
 
-<h3>Step 2: Processing Start Fee — ₹14,000</h3>
-<ul>
-<li>APS processing guidance & document support</li>
-<li>Public university shortlisting</li>
-<li>SOP structure & CV review</li>
-<li>Application strategy & timelines</li>
-</ul>
+  <div class="fee-card">
+    <div class="fee-step">Step 1</div>
+    <h3>Profile Evaluation</h3>
+    <p class="fee-highlight">FREE</p>
+    <p>No payment. No obligation. We first tell you if applying makes sense.</p>
+  </div>
 
-<h3>Step 3: Remaining Fee — Only After Admit</h3>
-<p><strong>No admit → No remaining payment</strong></p>
-<p><strong>Total Consultancy Fee: ₹26,000</strong></p>
-</div>
-</section>
+  <div class="fee-card featured">
+    <div class="fee-step">Step 2</div>
+    <h3>Processing Start Fee</h3>
+    <p class="fee-highlight">₹14,000</p>
+    <ul>
+      <li>APS processing guidance & document support</li>
+      <li>Public university shortlisting</li>
+      <li>SOP structure & CV review</li>
+      <li>Application strategy & timelines</li>
+    </ul>
+  </div>
 
-<!-- COMPARE -->
-<section id="compare">
-<h2 class="section-title">Market Comparison</h2>
+  <div class="fee-card">
+    <div class="fee-step">Step 3</div>
+    <h3>Remaining Fee</h3>
+    <p class="fee-highlight">Only After Admit</p>
+    <p><strong>No admit → No remaining payment</strong></p>
+    <p><strong>Total Consultancy Fee: ₹26,000</strong></p>
+  </div>
 
-<div class="card">
-<table>
-<tr>
-<th>Aspect</th>
-<th>Market</th>
-<th>Great Germany</th>
-</tr>
-<tr>
-<td>Total Consultancy Fee</td>
-<td><strong>₹38k – ₹70k</strong></td>
-<td><strong>₹26k</strong></td>
-</tr>
-<tr>
-<td>Upfront Payment</td>
-<td><strong>Full Amount</strong></td>
-<td><strong>₹14k Only</strong></td>
-</tr>
-<tr>
-<td>Private University Push</td>
-<td><strong>Common</strong></td>
-<td><strong>Never</strong></td>
-</tr>
-</table>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2 class="section-title">Contact & Free Profile Evaluation</h2>
+<h2 class="section-title">Know Your Probable Admission Chances</h2>
 
 <div class="card">
+<p>
+To understand your <strong>realistic admission chances</strong> for German public universities,
+please contact us directly.
+</p>
+
 <p><strong>Email:</strong> yourmail@gmail.com</p>
 <p><strong>WhatsApp:</strong> +91XXXXXXXXXX</p>
 
-<a href="https://forms.gle/YOURFORM" class="btn btn-primary">
-Start Free Profile Evaluation
-</a>
+<p style="margin-top:15px;">
+Contact us to know your probable admission chances.
+</p>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
 <p>
-All services are advisory in nature. Admission and visa decisions are made solely by
-universities and authorities.
+All services are advisory in nature. Admission and visa decisions are made solely by universities and authorities.
 </p>
 </footer>
 
