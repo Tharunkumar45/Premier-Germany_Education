@@ -43,16 +43,14 @@ nav a {
   margin-left: 22px;
   font-size: 15px;
 }
-
-nav a:hover { text-decoration: underline; }
-  .brand {
+.brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
 .logo {
-  height: 42px;
+  height: 42px;           /* Desktop size */
   width: auto;
   object-fit: contain;
 }
@@ -63,6 +61,16 @@ nav a:hover { text-decoration: underline; }
   font-size: 20px;
 }
 
+/* Mobile size */
+@media (max-width: 768px) {
+  .logo {
+    height: 34px;
+  }
+  .brand span {
+    font-size: 18px;
+  }
+}
+nav a:hover { text-decoration: underline; }
 
 /* ================= HERO ================= */
 header {
@@ -449,6 +457,7 @@ reveal();
 
 </body>
 </html>
+
 
 
 
