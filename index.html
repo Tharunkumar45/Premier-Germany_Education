@@ -100,7 +100,7 @@ section {
 .section-title {
   font-size: 32px;
   color: #0d4749;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* ================= CARDS ================= */
@@ -136,24 +136,17 @@ section {
   transition: 0.3s ease;
 }
 
-.fee-card:hover {
-  transform: translateY(-8px);
-}
+.fee-card:hover { transform: translateY(-8px); }
 
 .fee-step {
-  display: inline-block;
   background: #e0f2f1;
   color: #0d4749;
   font-weight: 600;
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 14px;
+  display: inline-block;
   margin-bottom: 14px;
-}
-
-.fee-card h3 {
-  margin-top: 10px;
-  color: #0d4749;
 }
 
 .fee-highlight {
@@ -163,30 +156,34 @@ section {
   margin: 14px 0;
 }
 
-.fee-note {
-  font-size: 15px;
-  color: #334155;
+/* ================= MARKET COMPARISON ================= */
+.compare-note {
+  color: #475569;
+  margin-bottom: 25px;
 }
 
-/* ================= MARKET COMPARISON ================= */
 .compare-table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 15px;
 }
 
 .compare-table th,
 .compare-table td {
-  padding: 16px;
+  padding: 18px;
   border: 1px solid #d1d5db;
 }
 
 .compare-table th {
   background: #e0f2f1;
   color: #0d4749;
+  font-weight: 600;
 }
 
-.compare-table td strong {
+.compare-highlight {
+  background: #f0fdfa;
   color: #0d4749;
+  font-weight: 600;
 }
 
 /* ================= FOOTER ================= */
@@ -223,7 +220,6 @@ footer {
 
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="brand">Great Germany</div>
   <div>
@@ -234,7 +230,6 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
 <header>
   <div class="hero-box">
     <h1>Great Germany</h1>
@@ -244,16 +239,9 @@ footer {
   </div>
 </header>
 
-<!-- ABOUT -->
 <section id="about">
 <h2 class="section-title">Experience-Based & Student-Led Guidance</h2>
-
 <div class="card">
-<p>
-<strong>Great Germany</strong> is run by a student team who have personally applied
-to German public universities and are currently staying in Germany.
-</p>
-
 <ul>
 <li>Students from <strong>Winter Intake 2025/26 and Summer Intake 2026</strong></li>
 <li>Guidance strictly for German public universities</li>
@@ -263,99 +251,73 @@ to German public universities and are currently staying in Germany.
 </div>
 </section>
 
-<!-- FEES -->
 <section id="fees">
 <h2 class="section-title">Our Transparent Fee Model</h2>
-
 <div class="fee-grid">
-
-  <div class="fee-card featured">
+  <div class="fee-card">
     <div class="fee-step">Step 1</div>
     <h3>Profile Evaluation</h3>
     <p class="fee-highlight">FREE</p>
-    <p class="fee-note">No payment. No obligation. We first tell you if applying makes sense.</p>
   </div>
-
-  <div class="fee-card featured">
+  <div class="fee-card">
     <div class="fee-step">Step 2</div>
     <h3>Processing Start Fee</h3>
     <p class="fee-highlight">₹14,000</p>
-     <ul>
-      <li>APS processing guidance & document support</li>
-      <li>Public university shortlisting</li>
-      <li>SOP structure & CV review</li>
-      <li>Application strategy & timelines</li>
-    </ul>
   </div>
-
-  <div class="fee-card featured">
+  <div class="fee-card">
     <div class="fee-step">Step 3</div>
     <h3>Remaining Fee</h3>
     <p class="fee-highlight">₹14,000</p>
-    <p class="fee-note">
-      Payable <strong>only after securing an admit</strong>.<br>
-      <strong>No admit → No remaining payment</strong>
-    </p>
-    <p class="fee-note" style="margin-top:12px;">
-      <strong>Total Consultancy Fee: ₹28,000</strong>
-    </p>
+    <p><strong>Total Consultancy Fee: ₹28,000</strong></p>
   </div>
-
 </div>
 </section>
 
-<!-- MARKET COMPARISON -->
 <section id="compare">
 <h2 class="section-title">Market Comparison</h2>
+<p class="compare-note">Compare before you decide — transparency matters.</p>
 
 <div class="card">
 <table class="compare-table">
 <tr>
 <th>Aspect</th>
 <th>Other Consultancies</th>
-<th>Great Germany</th>
+<th class="compare-highlight">Great Germany</th>
 </tr>
 <tr>
 <td>Total Consultancy Fee</td>
-<td><strong>₹45k – ₹70k</strong></td>
-<td><strong>₹28k</strong></td>
+<td>₹45k – ₹70k</td>
+<td class="compare-highlight">₹28k</td>
 </tr>
 <tr>
 <td>Upfront Payment</td>
-<td><strong>Full Amount</strong></td>
-<td><strong>₹14k Only</strong></td>
+<td>❌ Full Amount</td>
+<td class="compare-highlight">✅ ₹14k Only</td>
 </tr>
 <tr>
 <td>Profile Evaluation</td>
-<td><strong>Paid</strong></td>
-<td><strong>FREE</strong></td>
+<td>❌ Paid</td>
+<td class="compare-highlight">✅ FREE</td>
 </tr>
 <tr>
 <td>Private University Push</td>
-<td><strong>Common</strong></td>
-<td><strong>Never</strong></td>
+<td>⚠️ Common</td>
+<td class="compare-highlight">✅ Never</td>
 </tr>
 </table>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2 class="section-title">Know Your Probable Admission Chances</h2>
-
 <div class="card">
-<p>Contact us directly to understand your realistic chances.</p>
 <p><strong>Email:</strong> yourmail@gmail.com</p>
 <p><strong>WhatsApp:</strong> +91XXXXXXXXXX</p>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-<p>
-To understand your <strong>realistic admission chances</strong> for German public universities,
-please contact us directly.
-</p>
+<p>All services are advisory in nature. Final decisions are made by universities and authorities.</p>
 </footer>
 
 <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
@@ -375,5 +337,3 @@ reveal();
 
 </body>
 </html>
-
-
